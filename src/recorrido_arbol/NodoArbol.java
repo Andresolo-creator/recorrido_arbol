@@ -10,6 +10,11 @@ public class NodoArbol<T> {
         this.hijo = hijo;
     }
 
+    NodoArbol() {
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+    }
+
     public T getDato() {
         return dato;
     }
@@ -25,6 +30,17 @@ public class NodoArbol<T> {
     public void setHijo(NodoArbol[] hijo) {
         this.hijo = hijo;
     }
+    public void setHijo(int pos, T dato) {
+        
+    }
     
+    public void preOrden(){
+        System.out.println(this.dato);
+        if (hijo == null)return ;
+        for (NodoArbol n : hijo){
+           System.out.print(", "); 
+           n.preOrden();
+        }
+    }
     
 }
